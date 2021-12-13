@@ -227,7 +227,7 @@
       }
     }
     #d-toc {
-      z-index: z("header") + 1;
+      z-index: z("timeline" + 1);
       background: var(--secondary, $secondary);
       position: fixed;
       right: 0;
