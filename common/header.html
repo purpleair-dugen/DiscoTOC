@@ -67,9 +67,7 @@
         );
 
         self.element.addClass("d-toc");
-console.log("Nope");
 
-window.scrollTo(0, 0);
 
         primaryHeadings.each(function (index) {
           const selectors = self.options.selectors,
@@ -162,7 +160,7 @@ window.scrollTo(0, 0);
         $("html, body")
           .promise()
           .done(function () {
-            const winScrollTop = $(window).scrollTop();
+            const winScrollTop = 0;
             const anchors = $(self.options.cooked).find("[data-d-toc]");
 
             let closestAnchorDistance = null;
