@@ -349,8 +349,7 @@
 
   api.cleanupStream(() => {
     
-    $("#main").off("click.toggleDtoc");
-    $(".d-toc-timeline").removeClass("d-toc-timeline d-toc-timeline-visible");
+   
   });
 
   api.onAppEvent("topic:current-post-changed", post => {
