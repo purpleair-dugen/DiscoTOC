@@ -173,7 +173,25 @@
     .topic-avatar {
       border-top: none;
     }
-    //////
+    .d-toc {
+      max-height: 85vh;
+      padding-left: 0;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 75px;
+      margin-bottom: 135px;
+      max-width: 235px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      align-self: flex-start;
+      flex: 1 1 auto;
+      :not(.rtl) & {
+        margin-left: -1px;
+      }
+      .rtl & {
+        margin-right: -1px;
+      }
+    }
    
         .d-toc-article {
      display:flex;
