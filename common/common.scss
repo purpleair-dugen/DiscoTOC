@@ -183,14 +183,7 @@
       .topic-map {
         margin-bottom: 0;
       }
-      > .row {
-        :not(.rtl) & {
-          border-right: 1px solid var(--primary-low, $primary-low);
-        }
-        .rtl & {
-          border-left: 1px solid var(--primary-low, $primary-low);
-        }
-      }
+     //
     }
     #topic-title {
       margin-bottom: 0;
