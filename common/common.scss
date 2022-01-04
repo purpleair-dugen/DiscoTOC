@@ -151,30 +151,17 @@
 
 // large screens
 @media screen and (min-width: $large-width) {
-  .d-toc {
-    margin-top: 1em;
-  }
-  .post-bottom-wrapper {
-    padding: 1em 0.5em 0 0.5em;
-    &.mobile {
-      display: none;
-    }
-  }
 
-  .d-toc-toggle {
-    display: none !important;
-  }
-  .d-toc-close-wrapper,
-  .d-toc-subheading {
-    display: none;
-  }
-  .d-toc-post {
-    .topic-body,
-    .topic-avatar {
-      border-top: none;
-    }
     .d-toc {
-  
+      max-height: 85vh;
+      padding-left: 0;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 75px;
+      margin-bottom: 135px;
+      max-width: 235px;
+      overflow-y: auto;
+      overflow-x: hidden;
       align-self: flex-start;
       flex: 1 1 auto;
       :not(.rtl) & {
