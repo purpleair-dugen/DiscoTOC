@@ -243,6 +243,7 @@
 
   api.decorateCooked(
     $elem => {
+    window.scrollTo(0,0);
       run.scheduleOnce("actions", () => {
         if ($elem.hasClass("d-editor-preview")) return;
         if (!$elem.parents("article#post_1").length) return;
