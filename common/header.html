@@ -16,8 +16,6 @@
   const SMOOTH_SCROLL_SPEED = 300;
   const TOC_ANIMATION_SPEED = 300;
 
-
-
   const cleanUp = item => {
     const cleanItem = item
       .trim()
@@ -67,7 +65,6 @@
         );
 
         self.element.addClass("d-toc");
-
 
         primaryHeadings.each(function (index) {
           const selectors = self.options.selectors,
@@ -160,20 +157,16 @@
         $("html, body")
           .promise()
           .done(function () {
-            const winScrollTop = 0;
+            const winScrollTop = $(window).scrollTop();
             const anchors = $(self.options.cooked).find("[data-d-toc]");
 
             let closestAnchorDistance = null;
             let closestAnchorIdx = null;
 
             anchors.each(function (idx) {
-              const distance = 0;
-              
-              /*
-              Math.abs(
+              const distance = Math.abs(
                 $(this).offset().top - minimumOffset() - winScrollTop
               );
-              */
               if (
                 closestAnchorDistance == null ||
                 distance < closestAnchorDistance
@@ -247,7 +240,6 @@
 
   api.decorateCooked(
     $elem => {
-    
       run.scheduleOnce("actions", () => {
         if ($elem.hasClass("d-editor-preview")) return;
         if (!$elem.parents("article#post_1").length) return;
@@ -352,9 +344,9 @@
   );
 
   api.cleanupStream(() => {
-       $(window).off("scroll.d-toc");
+    $(window).off("scroll.d-toc");
     $("#main").off("click.toggleDtoc");
-    $(".d-toc-timeline").removeClass("d-toc-timeline d-toc-timeline-visible");   
+    $(".d-toc-timeline").removeClass("d-toc-timeline d-toc-timeline-visible");
   });
 
   api.onAppEvent("topic:current-post-changed", post => {
@@ -399,11 +391,9 @@
         }
       }
     });
-    
+
     api.onPageChange(url => {
-	// document.getElementById("ember8").scrollIntoView(true);
-	 
-	 
+	// document.getElementById("ember8").scrollIntoView(true);	 
 });
   }
 </script>
